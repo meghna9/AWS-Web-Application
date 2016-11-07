@@ -18,6 +18,6 @@ sudo rm -r /var/www/html/*
 #sudo mkdir /var/www/html/vendor
 #sudo mv vendor/* /var/www/html/vendor
 
-sudo mv /home/ubuntu/mlaveti/app/* /var/www/html
+sudo mv /home/ubuntu/mlaveti/week10/app/* /var/www/html
 
 php /var/www/html/dbddl.php
