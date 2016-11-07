@@ -3,7 +3,7 @@
 sudo apt-get update
 sudo apt-get -y install git apache2 php-xml libapache2-mod-php php php-mysql curl php-curl zip unzip
 
-cd /home/vagrant/mlaveti
+cd /home/ubuntu
 
 sudo curl -sS https://getcomposer.org/installer | php
 
