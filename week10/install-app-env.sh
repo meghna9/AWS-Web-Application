@@ -9,9 +9,9 @@ aws rds wait db-instance-available --db-instance-identifier mpl-db
 
 aws sns create-topic --Studentapp
 
-aws sns subscribe --topic-arn arn:arn:aws:iam::131515873733:user/meghnalaveti9 --protocol email --notification-endpoint mlaveti@hawk.iit.edu
+aws sns subscribe --topic-arn arn:aws:iam::131515873733:user/meghnalaveti9 --protocol email --notification-endpoint mlaveti@hawk.iit.edu
 
-aws sqs create-queue --queue-name my-queue --attributes '{ "RedrivePolicy":"{\"deadLetterTargetArn\":\"arn:aws:sqs:us-west-2:0123456789012:deadletter\", \"maxReceiveCount\":\"5\"}"}'
+aws sqs create-queue --queue-name my-queue --attributes '{ "RedrivePolicy":"{\"deadLetterTargetArn\":\"arn:aws:iam::131515873733:user/meghnalaveti9\", \"maxReceiveCount\":\"5\"}"}'
 
 aws s3 mb s3://raw-mpl
 
