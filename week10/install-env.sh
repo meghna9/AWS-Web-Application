@@ -9,7 +9,7 @@ export AWS_ACCESS_KEY_ID=AKIAJRP6EG3R5YZE5A7Q
 export AWS_SECRET_ACCESS_KEY=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
 
 
-aws ec2 run-instances --image-id $1  --key-name $2 --security-group-ids $3 --instance-type t2.micro --count $5 --user-data file://installapp.sh
+aws ec2 run-instances --image-id $1  --key-name $2 --security-group-ids $3 --instance-type t2.micro --count $5 --user-data file://install-app.sh
 
 meghnacloud=`aws ec2 describe-instances  --query 'Reservations[*].Instances[].InstanceId' --filters "Name=instance-state-name, Values=pending"`
 
