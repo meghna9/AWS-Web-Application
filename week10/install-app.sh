@@ -14,6 +14,13 @@ sudo systemctl start apache2
 
 sudo git clone git@github.com:illinoistech-itm/mlaveti.git
 
+cd /home/ubuntu/mlaveti/week10/
+
+chmod 777 install-app-env.sh
+./install-app-env.sh
+
+cd /home/ubuntu
+
 sudo rm -r /var/www/html/*
 #sudo mkdir /var/www/html/vendor
 #sudo mv vendor/* /var/www/html/vendor
