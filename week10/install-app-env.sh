@@ -8,7 +8,7 @@ aws rds create-db-instance --db-name meghnastorage --db-instance-identifier mpl-
 #echo "creating DB may take some time"
 aws rds wait db-instance-available --db-instance-identifier mpl-db
 
-aws sns create-topic --Studentapp
+aws sns create-topic --name Studentapp
 
 aws sns subscribe --topic-arn arn:null --protocol email --notification-endpoint mlaveti@hawk.iit.edu
 
