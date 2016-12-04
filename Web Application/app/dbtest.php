@@ -1,20 +1,21 @@
 <?php
-echo "begin database";
-$link = mysqli_connect("mpl-db.czi9s3krwslp.us-west-2.rds.amazonaws.com:3306","controller9","meghna999","mpl-db") or die("Error " . mysqli_error($link));
+$link = mysqli_connect('roundcube.c2amfvktfbda.us-east-1.rds.amazonaws.com', 'roundcube', 'R2oundC8ubE$x') or die('couldnot connect');
+//echo "begin database";
+//$link = mysqli_connect("mpl-db.czi9s3krwslp.us-west-2.rds.amazonaws.com:3306","controller9","meghna999","mpl-db") or die("Error " . mysqli_error($link));
 
 /* check connection */
-if (mysqli_connect_errno()) {
+/*if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
-
+*/
 
    # id INT NOT NULL AUTO_INCREMENT,
    # name VARCHAR(200) NOT NULL,
    # age INT NOT NULL,
 
 /* Prepared statement, stage 1: prepare */
-if (!($stmt = $link->prepare("INSERT INTO student (id, email,phone,filename,s3rawurl,s3finishedurl,status,issubscribed) VALUES (NULL,?,?,?,?,?,?,?)"))) {
+/*if (!($stmt = $link->prepare("INSERT INTO student (id, email,phone,filename,s3rawurl,s3finishedurl,status,issubscribed) VALUES (NULL,?,?,?,?,?,?,?)"))) {
     echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
 }
 
@@ -33,10 +34,10 @@ if (!$stmt->execute()) {
 }
 
 printf("%d Row inserted.\n", $stmt->affected_rows);
-
+*/
 
 /* explicit close recommended */
-$stmt->close();
+/*$stmt->close();
 
 $link->real_query("SELECT * FROM items");
 $res = $link->use_result();
@@ -48,5 +49,6 @@ while ($row = $res->fetch_assoc()) {
 
 
 $link->close();
+*/
+
 ?>
-dbtest

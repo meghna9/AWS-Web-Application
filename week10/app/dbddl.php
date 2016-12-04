@@ -1,33 +1,8 @@
-<?php 
-<?php
-
-require 'vendor/autoload.php';
-
-use Aws\Rds\RdsClient;
-$client = RdsClient::factory(array(
-'region'  => 'us-west-2'
-));
+ <?php 
 
 
-$result = $client->describeDBInstances(array(
-    'DBInstanceIdentifier' => 'mpl-db',
-));
-
-
-$endpoint = " mpl-db.czi9s3krwslp.us-west-2.rds.amazonaws.com:3306"; 
-
-
-foreach ($result->getPath('DBInstances/*/Endpoint/Address') as $ep) {
-    // Do something with the message
-    echo "============". $ep . "================";
-    $endpoint = $ep;
-}
-
-
-
-echo "begin database";
-$link = mysqli_connect($endpoint,"controller9","meghna999","mpl-db") or die("Error " . mysqli_error($link));
-
+echo "begin database".'<br/>';
+$link = mysqli_connect('roundcube.c2amfvktfbda.us-east-1.rds.amazonaws.com', 'roundcube', 'R2oundC8ubE$x','mp1-db') or die('couldnot connect');
 /* check connection */
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
@@ -59,18 +34,13 @@ $create_table = 'CREATE TABLE IF NOT EXISTS items
 
 
 
-$create_tbl = $link->query($create_table);
+$create_tbl = mysqli_query($link,$create_table);
 if ($create_table) {
 	echo "Table is created or No error returned.";
 }
 else {
         echo "error!!";  
 }
-$link->close();
+mysqli_close($link);
 ?>
 
-
-
-
-?>
-dbddl
