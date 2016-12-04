@@ -1,5 +1,6 @@
 <?php
 session_start();
+//ini_set('display_errors','on');
 $link = mysqli_connect('roundcube.c2amfvktfbda.us-east-1.rds.amazonaws.com', 'roundcube', 'R2oundC8ubE$x','mp1-db') or die('couldnot connect');
 if($_SESSION['userid'] != ''){
 header('Location: welcome.php');
@@ -65,3 +66,4 @@ else{
       </section>
    </body>
 </html>
+

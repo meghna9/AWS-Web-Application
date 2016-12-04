@@ -1,4 +1,4 @@
- <?php 
+<?php 
 
 
 echo "begin database".'<br/>';
