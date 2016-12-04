@@ -30,7 +30,7 @@ $count = mysqli_num_rows($sql);
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Gaw508\PhpSqsTutorial\Message;
+use Gaw508\PhpSqsTutorial\Edit;
 use Gaw508\PhpSqsTutorial\Queue;
 
 // Array of messages to be displayed to the user.
@@ -68,7 +68,7 @@ if ( !empty($_FILES)) {
                     $warnings[] = array('class' => 'alert-danger', 'text' => 'Error uploading file.');
                 } else {
                     // Create a new message with processing instructions and push to SQS queue
-                    $message = new Message(array(
+                    $message = new Edit(array(
                         'input_file_path' => __DIR__ . '/images/queued/' . $new_name,
                         'output_file_path' => __DIR__ . '/images/watermarked/' . $new_name
                     ));

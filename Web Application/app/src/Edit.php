@@ -15,7 +15,7 @@ namespace Gaw508\PhpSqsTutorial;
 use Imagick;
 use ImagickDraw;
 
-class Message
+class Edit
 {
     /**
      * The path of the uploaded file to be processed
