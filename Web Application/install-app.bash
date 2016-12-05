@@ -31,6 +31,6 @@ sudo rm -r /var/www/html/*
 #sudo mkdir /var/www/html/vendor
 #sudo mv vendor/* /var/www/html/vendor
 
-sudo cp -r /home/ubuntu/mlaveti/Web Application/app/* /var/www/html
+sudo cp -r /home/ubuntu/mlaveti/week10/app/* /var/www/html
 
 php /var/www/html/dbddl.php
